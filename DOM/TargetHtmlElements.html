@@ -1,0 +1,94 @@
+<html>
+    <body>
+
+        <h2> 1. Change Inner HTML </h2>
+        <h3 id="question"> Who are you ?</h3>
+        <button type="button" onclick="showAns()"> Show Ans</button>
+        <button onclick="showQus()">Show Question </button>
+
+
+        <h2> 2. Change HTML Attributes</h2>
+        <img id="bulb-img" src="images/bulboff.png" style="width: 200px; height: 300px;" alt="bulboff">
+        <button type="button"  onclick='bulbOn()'> Bulb ON</button>
+        <button type="button" onclick="bulbOff()">Bulb Off </button>
+
+        <h2> 3. Change Styel of HTML Element </h2>
+        <div class="blue-box" style="width: 100px; height:100px; background-color: aqua;"> </div>
+        <button type="button" onclick='makeRedBox()'> Make Red </button>
+        <button onclick="makeBlueBox()"> Make Blue</button>
+
+        <h2> 4. Hide Image</h2>
+        <img class="hide-img" src="https://www.w3schools.com/css/paris.jpg" alt="paris-img">
+        <button onclick="hideImg()"> Hide </button>
+        <button onclick="showImg()"> Show </button>
+        
+
+        <h2>5 Show a greetings</h2>
+        <button onclick="greetings()">  Hello </button>
+
+        <h2> 6 Print page </h2>
+        <button ondblclick="printPage()">DBl Click  Print Page</button>
+
+
+
+
+
+        <script>
+
+            //change inner HTML
+            function showAns(){
+                document.getElementById("question").innerHTML = "My Name Is Anand";
+            }
+            
+            function showQus(){
+                document.getElementById("question").innerHTML = "Who Are YOU ? ";
+            }
+
+
+            //change Attribute
+            function bulbOn(){
+                document.getElementById("bulb-img").src="images/bulbon.png";
+            }
+
+            function bulbOff(){
+                document.getElementById("bulb-img").src="images/bulboff.png";
+            }
+
+
+            //change style 
+            function makeRedBox(){
+                document.getElementsByClassName("blue-box")[0].style.backgroundColor="red";
+            }
+
+            function makeBlueBox(){
+                document.getElementsByClassName("blue-box")[0].style.backgroundColor="aqua";
+            }
+
+
+            // hide img 
+            function hideImg (){
+                document.getElementsByClassName("hide-img")[0].style.visibility="hidden";
+            }
+
+            function showImg(){
+                document.getElementsByClassName("hide-img")[0].style.visibility="visible";
+            }
+
+
+            // document.write(100+200); document.write() use only for testing 
+            
+            // alert popup msg 
+            function greetings(){
+                window.alert("Hello everyone");  //window keyword is optional
+            }
+            
+            // print page 
+            function printPage (){
+                window.print();
+            }
+                
+
+
+        </script>
+    </body>
+</html>
